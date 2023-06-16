@@ -1,0 +1,44 @@
+.App {
+  text-align: center;
+}
+
+input{
+  display: block;
+  margin: 15px auto;
+  padding: 5px 10px;
+  outline: none;
+  border-radius: 5px;
+}
+
+
+.contain-form{
+  margin: 100px auto 20px;
+}
+
+.error{
+  color: rgb(199, 12, 12);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.submit{
+  width: 75px;
+  height: 25px;
+  border: none;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.find{
+  font-size: 18px;
+  font-weight: bold;
+}
+.user-item{
+  border: 1px solid black;
+  width: 200px;
+  margin: 15px auto;
+  padding: 3px 5px;
+  text-align: left;
+}
