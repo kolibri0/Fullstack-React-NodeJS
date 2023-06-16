@@ -4,11 +4,16 @@ import InputMask from "react-input-mask";
 import './App.css';
 import axios from 'axios';
 
+interface IUser {
+  email: string,
+  number: string
+}
+
 function App() {
 
-  const [email, setEmail] = React.useState('')
-  const [number, setNumber] = React.useState('')
-  const [users, setUsers] = React.useState<null | any[]>(null)
+  const [email, setEmail] = React.useState<string>('')
+  const [number, setNumber] = React.useState<string>('')
+  const [users, setUsers] = React.useState<null | IUser[]>(null)
   const [error, setError] = React.useState<null | string>(null);
 
   function isValidEmail(email: string) {
@@ -16,7 +21,7 @@ function App() {
   }
 
   const get_user = async ({ email, number }: any) => {
-    const { data } = await axios.get('http://localhost:8000', {
+    const { data } = await axios.get('http://localhost:9000', {
       params: {
         email,
         number
@@ -41,7 +46,7 @@ function App() {
     } else {
       setError(null);
     }
-    const info = {
+    const info: IUser = {
       email,
       number
     }
@@ -69,12 +74,10 @@ function App() {
             <div className='contain-user'>
               <div>Users:</div>
               {
-                users.map((user: any) => (
+                users.map((user: IUser) => (
                   <div className='user-item'>
                     <div className='email'>Email: {user.email}</div>
-                    {/* <div className='number'>Number: {user.number}</div> */}
                     <div className='number'>Number: {user.number.substring(0, 2) + '-' + user.number.substring(2, 4) + '-' + user.number.substring(4, 6)}</div>
-
                   </div>
                 ))
               }
