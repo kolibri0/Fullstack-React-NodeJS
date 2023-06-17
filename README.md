@@ -43,7 +43,11 @@ email (обязательное) и number (опциональное)
 - фронт react или vue
 - бек nodejs
 
+## Result:
 
+![345](https://github.com/kolibri0/Fullstack-React-NodeJS/assets/99971966/cc8b4949-0d15-4df9-81f4-f0ea8b609a0a)
+![dfgiudfg](https://github.com/kolibri0/Fullstack-React-NodeJS/assets/99971966/d5580410-5142-4066-8be0-b806086ef419)
+![dsfgd](https://github.com/kolibri0/Fullstack-React-NodeJS/assets/99971966/a3cd6fca-35c5-4c32-be9b-4e6c91714869)
 
 
 
